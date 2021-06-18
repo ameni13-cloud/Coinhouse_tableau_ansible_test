@@ -13,7 +13,7 @@ tableau_server_admin_pass: am123
 installer_version_major: 2019
 installer_version_minor: 1
 installer_version_patch: 1
-installer_deb_package: tableau-server-{{ installer_version_major }}-{{ installer_version_minor }}-{{ installer_version_patch }}_amd64.deb
+installer_deb_package: tableau-server-{{ installer_version_major }}-{{ installer_version_minor }}-{{ installer_version_patch }}.deb
 installer_deb_url: https://downloads.tableau.com/esdalt/{{ installer_version_major }}.{{ installer_version_minor }}.{{ installer_version_patch }}/{{ installer_deb_package }}
 installer_install_directory: /var/opt/tableau/tableau_server
 
