@@ -4,10 +4,10 @@ An ansible role that install Tableau on ubuntu 18
 
 In this playbook, we will install an instance of Tableau Server for Linux that has the following characteristics: 
 
-* Operating System: Supported RHEL-type Linux distributions, Ubuntu or Debian
+* Operating System: Supported RHEL-type Linux distributions, Ubuntu or Suse
 * Identity store: local authentication
 * Gateway Port: 80
-* Tableau Server administrator account: admin
+
 
 To start the process you’ll need a fresh copy of Linux on a machine that meets Tableau Server’s minimum hardware requirements (64-bit 2 core processor, 8 GB RAM, 15 GB free space). 
 
