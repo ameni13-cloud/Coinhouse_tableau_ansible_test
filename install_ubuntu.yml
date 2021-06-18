@@ -33,17 +33,17 @@
 
 - name: Copy Tableau Server config file onto guest
   template:
-    src: config.json.j2
+    src: config.json
     dest: "{{ temp_files_dir }}config.json"
 
 - name: Copy Tableau Server registration template file
   template:
-    src: reg_templ.json.j2
+    src: reg_templ.json
     dest: "{{ temp_files_dir }}reg_templ.json"
 
 - name: Copy Tableau Server secrets file
   template:
-    src: secrets.txt.j2
+    src: secrets.txt
     dest: "{{ temp_files_dir }}secrets.txt"
 
 - name: Check if Tableau Server is already installed
