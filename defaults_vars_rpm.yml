@@ -1,0 +1,26 @@
+---
+
+temp_files_dir: /tmp/tableau-installer-files/
+
+tsm_admin_user: tableau
+tsm_admin_pass: am13081995
+tsm_admin_salt: az123456
+tsm_admin_group: tableau
+
+tableau_server_admin_user: admin
+tableau_server_admin_pass: am123
+
+installer_version_major: 2019
+installer_version_minor: 1
+installer_version_patch: 1
+installer_rpm_package: tableau-server-{{ installer_version_major }}-{{ installer_version_minor }}-{{ installer_version_patch }}.noarch.rpm
+installer_rpm_url: https://downloads.tableau.com/esdalt/{{ installer_version_major }}.{{ installer_version_minor }}.{{ installer_version_patch }}/{{ installer_rpm_package }}
+installer_install_directory: /var/opt/tableau/tableau_server
+
+automated_installer_version_major: 2019
+automated_installer_version_minor: 1
+automated_installer_rpm_package: tableau-server-automated-installer-{{ automated_installer_version_major }}-{{ automated_installer_version_minor }}.noarch.rpm
+automated_installer_rpm_url: https://github.com/tableau/server-install-script-samples/raw/master/linux/automated-installer/packages/{{ automated_installer_rpm_package }}
+automated_installer_install_directory: /opt/tableau/tableau_server_automated_installer
+automated_installer_args: "-a {{ tsm_admin_user }} -s {{ temp_files_dir }}secrets.txt -f {{ temp_files_dir }}config.json -r {{ temp_files_dir }}reg_templ.json --accepteula {{ temp_files_dir }}{{ installer_rpm_package }}"
+
